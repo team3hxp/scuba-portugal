@@ -71,9 +71,9 @@ def step_impl(context):
 def step_impl(context):
     time.sleep(pause)
     try:
-	element = context.browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/h2')
+        element = context.browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/h2')
     except NoSuchElementException:
-	return false
+        return false
     return true
 
 @step("I should see the group name Picle")
