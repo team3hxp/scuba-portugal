@@ -1,7 +1,7 @@
 # scuba-portugal
 Demonstration site
 
-## Team 3 is ready
+## Team Picle is ready
 
 ## Init (virtual) env
 ```
