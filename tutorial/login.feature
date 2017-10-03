@@ -4,6 +4,12 @@ Feature: User Login
   I want to login to the system
   So that I can purchase lots of stuff
 
+
+  Scenario: Group Name
+    Given I am on the login page
+    When Title exists
+    Then I should see the group name Picle
+
   Scenario: Valid Login
     Given I am on the login page
     When I enter a valid username and password

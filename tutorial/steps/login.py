@@ -66,3 +66,19 @@ def step_impl(context):
 def step_impl(context):
     message = context.browser.find_element_by_id('message').text
     assert message == "Missing Username"
+
+@when("Title exists")
+def step_impl(context):
+    time.sleep(pause)
+    try:
+	element = context.browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/h2')
+    except NoSuchElementException:
+	return false
+    return true
+
+@step("I should see the group name Picle")
+def step_impl(context):
+    element = context.browser.find_element_by_xpath('/html/body/div[1]/div/div[1]/h2')
+    assert element.text == "Scuba Portugal - Group Picle"
+
+
